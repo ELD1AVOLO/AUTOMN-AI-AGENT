@@ -1,0 +1,7 @@
+Je développe une application métier pour une compagnie d’assurance.
+Cette application sert à gérer les informations sur les clients, les contrats d’assurance, les garanties et les événements associés comme les sinistres.
+Elle permet aux utilisateurs de consulter, créer et modifier ces données.
+
+Chaque entité (client, contrat, garantie...) est décrite séparément et sera traitée une par une.
+
+Je souhaite obtenir, pour chaque entité, une description claire de son rôle et de ses champs principaux, dans un style simple et professionnel, afin de créer une documentation métier facile à comprendre.

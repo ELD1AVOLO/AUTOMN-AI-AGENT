@@ -1,0 +1,66 @@
+{
+  "etapes": [
+    {
+      "type": "tâche humaine",
+      "nom": "InitierReclamation",
+      "roles": [
+        "lastAssignedUser"
+      ]
+    },
+    {
+      "type": "tâche humaine",
+      "nom": "SaisirDetails",
+      "roles": [
+        "startUser"
+      ]
+    },
+    {
+      "type": "tâche humaine",
+      "nom": "Validation",
+      "roles": [
+        "personnePhysique"
+      ]
+    },
+    {
+      "type": "tâche humaine",
+      "nom": "ExamenRemboursement",
+      "roles": [
+        "personnePhysique"
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "source": "DemandeRemboursementSoinsSante.debut",
+      "destination": "InitialiserContexte"
+    },
+    {
+      "source": "InitialiserContexte",
+      "destination": "InitierReclamation"
+    },
+    {
+      "source": "InitierReclamation",
+      "destination": "SaisirDetails"
+    },
+    {
+      "source": "SaisirDetails",
+      "destination": "Validation"
+    },
+    {
+      "source": "Validation",
+      "destination": "ExamenRemboursement"
+    },
+    {
+      "source": "ExamenRemboursement",
+      "destination": "DemandeRemboursementSoinsSante.fin"
+    }
+  ],
+  "ordre_etapes": [
+    "InitialiserContexte",
+    "InitierReclamation",
+    "SaisirDetails",
+    "Validation",
+    "ExamenRemboursement",
+    "DemandeRemboursementSoinsSante.fin"
+  ]
+}

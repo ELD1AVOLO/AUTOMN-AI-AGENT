@@ -1,0 +1,65 @@
+<process-definition xmlns="" name="DemandeRemboursementSoinsSante">
+  <start-state name="DemandeRemboursementSoinsSante.debut">
+    <transition name="ToInitialiserContext" to="InitialiserContexte"/>
+  </start-state>
+  <state name="InitialiserContexte">
+    <transition name="toInitierReclamation" to="InitierReclamation"/>
+    <event type="node-enter">
+      <action class="com.caciopee.genie.utils.UpdateContextVariable">
+        <variable>instanceVariable.processName</variable>
+        <valueSource>_self.processDefinition.name</valueSource>
+      </action>
+      <action class="com.caciopee.genie.utils.UpdateContextVariable">
+        <variable>startUser</variable>
+        <valueSource>instanceVariable.startUser</valueSource>
+      </action>
+      <action class="com.caciopee.bpm.CallServiceBpm">
+        <serviceName>TEST.Operation.getOperationProcessInstance</serviceName>
+      </action>
+    </event>
+    <description>Initialiser le contexte JBPM</description>
+  </state>
+  <end-state name="DemandeRemboursementSoinsSante.fin"/>
+  <task-node name="InitierReclamation">
+    <taskType>Human</taskType>
+    <transition name="toSaisirDetails" to="SaisirDetails"/>
+    <task>
+      <assignment class="com.caciopee.genie.utils.TaskAssigneUser">
+        <dataSource>lastAssignedUser</dataSource>
+      </assignment>
+    </task>
+  </task-node>
+  <task-node name="SaisirDetails">
+    <taskType>Human</taskType>
+    <transition name="toValidation" to="Validation"/>
+    <transition name="toAnnuler" to="DemandeRemboursementSoinsSante.fin"/>
+    <task>
+      <assignment class="com.caciopee.genie.utils.TaskAssigneUser">
+        <dataSource>startUser</dataSource>
+      </assignment>
+    </task>
+  </task-node>
+  <task-node name="Validation">
+    <taskType>Human</taskType>
+    <transition name="toRetourner" to="SaisirDetails"/>
+    <transition name="toExamenRemboursement" to="ExamenRemboursement"/>
+    <task>
+      <assignment class="com.caciopee.genie.utils.TaskAssigneUser">
+        <dataSource>personnePhysique</dataSource>
+        <endpoint></endpoint>
+        <endGroup>ppValidation</endGroup>
+      </assignment>
+    </task>
+  </task-node>
+  <task-node name="ExamenRemboursement">
+    <taskType>Human</taskType>
+    <transition name="ToEnd" to="DemandeRemboursementSoinsSante.fin"/>
+    <task>
+      <assignment class="com.caciopee.genie.utils.TaskAssigneUser">
+        <dataSource>personnePhysique</dataSource>
+        <endpoint></endpoint>
+        <endGroup>ppExamenRemboursement</endGroup>
+      </assignment>
+    </task>
+  </task-node>
+</process-definition>

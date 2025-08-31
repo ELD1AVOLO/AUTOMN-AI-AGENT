@@ -1,0 +1,36 @@
+<Composant-Definition code="OrdonnanceCp">
+  <type>TYPE_BEAN_COMP</type>
+  <ComposantsFils>
+    <Composant-Definition code="DocumentCp">
+      <name>signaturePharmacien</name>
+      <type>TYPE_BEAN_COMP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+      <ComposantsFils/>
+      <detailComposants>
+        <Attribut code="typePiece">
+          <type>TYPE_ATTR_DP</type>
+          <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+          <mandatory>false</mandatory>
+        </Attribut>
+      </detailComposants>
+    </Composant-Definition>
+  </ComposantsFils>
+  <detailComposants>
+    <Attribut code="dateExecution">
+      <type>TYPE_ATTR_DATE</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="iNPE">
+      <type>TYPE_ATTR_STR</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="prixFacture">
+      <type>TYPE_ATTR_DOUBLE</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+  </detailComposants>
+</Composant-Definition>

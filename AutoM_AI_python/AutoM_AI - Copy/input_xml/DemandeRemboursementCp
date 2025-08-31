@@ -1,0 +1,91 @@
+<Composant-Definition code="DemandeRemboursementCp">
+  <type>TYPE_BEAN_COMP</type>
+  <ComposantsFils/>
+  <detailComposants>
+    <Attribut code="dateValidation">
+      <type>TYPE_ATTR_DATE</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="etablissemnetSoinsINPE">
+      <type>TYPE_ATTR_STR</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="immatriculationPatient">
+      <type>TYPE_ATTR_STR</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="medecinTraitantINPE">
+      <type>TYPE_ATTR_STR</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="montantFrais">
+      <type>TYPE_ATTR_DOUBLE</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="montantRemboursementApprouve">
+      <type>TYPE_ATTR_DOUBLE</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="numDossier">
+      <type>TYPE_ATTR_STR</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="ppActeBiologieRadiologieImagerie">
+      <type>TYPE_ATTR_PP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="ppActeEffectue">
+      <type>TYPE_ATTR_PP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="ppOrdonnance">
+      <type>TYPE_ATTR_PP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="ppStart">
+      <type>TYPE_ATTR_PP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="statut">
+      <type>TYPE_ATTR_DP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="statutActeBioRadioImag">
+      <type>TYPE_ATTR_DP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="statutActeEffectue">
+      <type>TYPE_ATTR_DP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="statutOrdonnance">
+      <type>TYPE_ATTR_DP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="typeSoins">
+      <type>TYPE_ATTR_DP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="validation">
+      <type>TYPE_ATTR_DP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+  </detailComposants>
+</Composant-Definition>

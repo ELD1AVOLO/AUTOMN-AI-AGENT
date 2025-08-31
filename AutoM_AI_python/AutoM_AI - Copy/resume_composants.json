@@ -1,0 +1,346 @@
+{
+  "entites": [
+    {
+      "code": "ActeCp",
+      "type": "TYPE_BEAN_COMP",
+      "attributs": [
+        {
+          "nom": "codeActe",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "dateActe",
+          "type": "TYPE_ATTR_DATE",
+          "obligatoire": false
+        },
+        {
+          "nom": "iNPE",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "montantFacture",
+          "type": "TYPE_ATTR_DOUBLE",
+          "obligatoire": false
+        }
+      ],
+      "relations": [
+        {
+          "nom": "signRadiologueBiologiste",
+          "code": "DocumentCp",
+          "type": "TYPE_BEAN_COMP",
+          "cardinalite": "TYPE_RELATION_SIMPLE",
+          "attributs": [
+            {
+              "nom": "typePiece",
+              "type": "TYPE_ATTR_DP",
+              "obligatoire": false
+            }
+          ],
+          "cardinalité": "1:1"
+        },
+        {
+          "nom": "signatureMedecinTraitant",
+          "code": "DocumentCp",
+          "type": "TYPE_BEAN_COMP",
+          "cardinalite": "TYPE_RELATION_SIMPLE",
+          "attributs": [
+            {
+              "nom": "typePiece",
+              "type": "TYPE_ATTR_DP",
+              "obligatoire": false
+            }
+          ],
+          "cardinalité": "1:1"
+        }
+      ],
+      "description": "Entité métier représentant ActeCp"
+    },
+    {
+      "code": "DemandeRemboursementCp",
+      "type": "TYPE_BEAN_COMP",
+      "attributs": [
+        {
+          "nom": "dateValidation",
+          "type": "TYPE_ATTR_DATE",
+          "obligatoire": false
+        },
+        {
+          "nom": "etablissemmentSoinsINPE",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "immatriculationPatient",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "medecinTraitantINPE",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "montantFrais",
+          "type": "TYPE_ATTR_DOUBLE",
+          "obligatoire": false
+        },
+        {
+          "nom": "montantRemboursementApprouve",
+          "type": "TYPE_ATTR_DOUBLE",
+          "obligatoire": false
+        },
+        {
+          "nom": "numDossier",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "ppActeBiologieRadiologieImagerie",
+          "type": "TYPE_ATTR_PP",
+          "obligatoire": false
+        },
+        {
+          "nom": "ppActeEffectue",
+          "type": "TYPE_ATTR_PP",
+          "obligatoire": false
+        },
+        {
+          "nom": "ppOrdonnance",
+          "type": "TYPE_ATTR_PP",
+          "obligatoire": false
+        },
+        {
+          "nom": "ppStart",
+          "type": "TYPE_ATTR_PP",
+          "obligatoire": false
+        },
+        {
+          "nom": "statut",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "statutActeBioRadioImag",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "statutActeEffectue",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "statutOrdonnance",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "typeSoins",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "validation",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        }
+      ],
+      "relations": [],
+      "description": "Entité métier représentant DemandeRemboursementCp"
+    },
+    {
+      "code": "OrdonnanceCp",
+      "type": "TYPE_BEAN_COMP",
+      "attributs": [
+        {
+          "nom": "dateExecution",
+          "type": "TYPE_ATTR_DATE",
+          "obligatoire": false
+        },
+        {
+          "nom": "iNPE",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "prixFacture",
+          "type": "TYPE_ATTR_DOUBLE",
+          "obligatoire": false
+        }
+      ],
+      "relations": [
+        {
+          "nom": "DocumentCp",
+          "code": "DocumentCp",
+          "type": "TYPE_BEAN_COMP",
+          "cardinalite": "TYPE_RELATION_SIMPLE",
+          "attributs": [
+            {
+              "nom": "signaturePharmacien",
+              "type": "TYPE_ATTR_DP",
+              "obligatoire": false
+            }
+          ],
+          "description": "Relation avec la signature du pharmacien",
+          "cardinalité": "1:1"
+        }
+      ],
+      "description": "Entité métier représentant une ordonnance de comptabilité"
+    },
+    {
+      "code": "Tiers",
+      "type": "TYPE_BEAN_COMP",
+      "attributs": [
+        {
+          "nom": "Identifiant",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "PersonneMorale",
+          "type": "TYPE_ATTR_PM",
+          "obligatoire": false
+        },
+        {
+          "nom": "PersonnePhysique",
+          "type": "TYPE_ATTR_PP",
+          "obligatoire": false
+        },
+        {
+          "nom": "Prenom",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "adresse",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "adresse2",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "categorie",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "categorieTiers",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "cin",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "civilite",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "dateNaissance",
+          "type": "TYPE_ATTR_DATE",
+          "obligatoire": false
+        },
+        {
+          "nom": "descriptionActivite",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "fax",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "fax2",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "fonctions",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "immatriculation",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "licenceDate",
+          "type": "TYPE_ATTR_DATE",
+          "obligatoire": false
+        },
+        {
+          "nom": "licenceNumber",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "licenceType",
+          "type": "TYPE_ATTR_MULTIPLE_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "mail",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "nom",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "raisonSocial_Nom",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "representantLegal",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "sexe",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "siteWeb",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "telephone",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "telephone2",
+          "type": "TYPE_ATTR_STR",
+          "obligatoire": false
+        },
+        {
+          "nom": "typeTiers",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        },
+        {
+          "nom": "ville",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        }
+      ],
+      "relations": [],
+      "description": "Entité métier représentant Tiers"
+    }
+  ]
+}

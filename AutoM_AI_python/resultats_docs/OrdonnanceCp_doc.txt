@@ -1,0 +1,34 @@
+Composant : OrdonnanceCp (Entité métier représentant une ordonnance de comptabilité)
+
+Informations de base :
+
+id (type) : Identifiant unique de l'ordonnance
+
+numeroDossier (type) : Numéro de dossier associé à l'ordonnance
+
+[Données patient] :
+
+cinPatient (type) : Numéro de l'assuré qui a reçu la ordonnance
+
+raisonSociale (type) : Raison sociale de l'assuré
+
+dateNaissance (type) : Date de naissance du patient
+
+[Données médicales] :
+
+iNPE (type) : Code INPE associé à la ordonnance
+
+[Données financières] :
+
+prixFacture (type) : Montant total de la facture pour la ordonnance
+
+dateExecution (type) : Date de réalisation de l'ordonnance
+
+[Suivi et statut] :
+
+statut (type) : État actuel de l'ordonnance (par exemple, en cours, résolu)
+
+[Documents associés] :
+
+DocumentCp (type) : Relation avec le document CP associé à l'ordonnance
+   - signaturePharmacien (type) : Date et heure de la signature du pharmacien pour le document CP

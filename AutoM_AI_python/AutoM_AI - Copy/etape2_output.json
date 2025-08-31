@@ -1,0 +1,119 @@
+{
+  "objectif": "Optimiser le processus de traitement des remboursements médicaux via une interface métier complète, sécurisée et adaptée aux besoins internes des agents.",
+  "utilisateurs": [
+    {
+      "nom": "Agent de saisie"
+    },
+    {
+      "nom": "Agent valideur"
+    },
+    {
+      "nom": "Superviseur"
+    }
+  ],
+  "actions": {
+    "Agent de saisie": [
+      {
+        "name": "Enregistrer une nouvelle demande",
+        "description": "Remplir les champs obligatoires (identifiant, montant, date des soins, type de soin, justificatifs)"
+      },
+      {
+        "name": "Ajouter des commentaires internes"
+      }
+    ],
+    "Agent valideur": [
+      {
+        "name": "Visualiser la liste des demandes à traiter"
+      },
+      {
+        "name": "Accéder au détail d'une demande"
+      },
+      {
+        "name": "Valider, mettre en attente ou rejeter la demande"
+      },
+      {
+        "name": "Ajouter des commentaires internes"
+      }
+    ],
+    "Superviseur": [
+      {
+        "name": "Visualiser la liste des demandes à traiter"
+      },
+      {
+        "name": "Accéder au détail d'une demande"
+      },
+      {
+        "name": "Consulter l'historique des demandes"
+      },
+      {
+        "name": "Filtrer les demandes par statut, date ou type de soin"
+      },
+      {
+        "name": "Exporter les résultats en Excel ou PDF"
+      }
+    ]
+  },
+  "étapes_logiques": [
+    {
+      "nom": "Enregistrer une nouvelle demande",
+      "description": "Saisir les informations obligatoires et ajouter des justificatifs numérisés"
+    },
+    {
+      "nom": "Valider la demande",
+      "description": "Vérifier les informations saisies et valider la demande"
+    },
+    {
+      "nom": "Mettre en attente ou rejetter la demande",
+      "description": "Poursuivre le traitement de la demande ou la rejeter si elle est invalidée"
+    },
+    {
+      "nom": "Consulter l'historique des demandes",
+      "description": "Vérifier les statuts antérieurs des demandes"
+    }
+  ],
+  "interfaces_attendues": [
+    {
+      "name": "Liste des demandes à traiter"
+    },
+    {
+      "name": "Détail d'une demande"
+    },
+    {
+      "name": "Historique des demandes"
+    },
+    {
+      "name": "Exportation des résultats"
+    }
+  ],
+  "données_saisies": [
+    {
+      "nom": "Identifiant de l'assuré"
+    },
+    {
+      "nom": "Montant à rembourser"
+    },
+    {
+      "nom": "Date des soins"
+    },
+    {
+      "nom": "Type de soin"
+    },
+    {
+      "nom": "Justificatifs numérisés (PDF, images)"
+    }
+  ],
+  "contraintes": [
+    {
+      "name": "Conformité aux normes internes de développement (Java + ZK/ZUL)"
+    },
+    {
+      "name": "Respect de la confidentialité (RGPD)"
+    },
+    {
+      "name": "Responsivité sur postes bureautiques uniquement"
+    },
+    {
+      "name": "Accès réservé aux utilisateurs authentifiés via Active Directory"
+    }
+  ]
+}

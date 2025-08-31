@@ -1,0 +1,55 @@
+<Composant-Definition code="ActeCp">
+  <type>TYPE_BEAN_COMP</type>
+  <ComposantsFils>
+    <Composant-Definition code="DocumentCp">
+      <name>signRadiologueBiologiste</name>
+      <type>TYPE_BEAN_COMP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+      <ComposantsFils/>
+      <detailComposants>
+        <Attribut code="typePiece">
+          <type>TYPE_ATTR_DP</type>
+          <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+          <mandatory>false</mandatory>
+        </Attribut>
+      </detailComposants>
+    </Composant-Definition>
+    <Composant-Definition code="DocumentCp">
+      <name>signatureMedecinTraitant</name>
+      <type>TYPE_BEAN_COMP</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+      <ComposantsFils/>
+      <detailComposants>
+        <Attribut code="typePiece">
+          <type>TYPE_ATTR_DP</type>
+          <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+          <mandatory>false</mandatory>
+        </Attribut>
+      </detailComposants>
+    </Composant-Definition>
+  </ComposantsFils>
+  <detailComposants>
+    <Attribut code="codeActe">
+      <type>TYPE_ATTR_STR</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="dateActe">
+      <type>TYPE_ATTR_DATE</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="iNPE">
+      <type>TYPE_ATTR_STR</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+    <Attribut code="montantFacture">
+      <type>TYPE_ATTR_DOUBLE</type>
+      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>
+      <mandatory>false</mandatory>
+    </Attribut>
+  </detailComposants>
+</Composant-Definition>

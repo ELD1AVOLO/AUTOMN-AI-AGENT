@@ -1,0 +1,36 @@
+Composant : DemandeRemboursementCp (Entité métier représentant une demande de remboursement pour un patient hospitalisé au Centre Piloté (CP), contenant les informations nécessaires pour traiter la demande)
+
+Informations de base :
+
+code (type) : code composant (ex: "DemandeRemboursementCp")
+
+Données patient :
+
+immatriculationPatient (string) : identifiant du patient hospitalisé
+medecinTraitantINPE (string) : nom du médecin traitant du patient
+
+Données médicales :
+
+typeSoins (DP) : type de soins fournis au patient
+statutActeBioRadioImag (DP) : statut des actes de biologie, radiologie et imagerie
+
+Financières :
+
+montantFrais (double) : montant total des frais de soins
+montantRemboursementApprouve (double) : montant du remboursement approuvé
+
+Suivi et statut :
+
+statut (DP) : statut général de la demande de remboursement
+validation (DP) : date de validation de la demande de remboursement
+
+Documents associés :
+
+ppActeBiologieRadiologieImagerie (PP) : pièce justificative pour les actes de biologie, radiologie et imagerie
+ppActeEffectue (PP) : pièce justificative pour les actes effectués
+ppOrdonnance (PP) : pièce justificative pour l'ordonnance
+ppStart (PP) : pièce justificative pour le démarrage du traitement
+
+Etablissements de soins :
+
+etablissemmentSoinsINPE (string) : établissement des soins au Centre Piloté (INPE)

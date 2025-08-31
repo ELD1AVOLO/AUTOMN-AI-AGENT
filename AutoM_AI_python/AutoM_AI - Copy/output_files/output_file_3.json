@@ -1,0 +1,10 @@
+{
+  "total_files": 1,
+  "files": [
+    {
+      "file_id": 3,
+      "file_name": "OrdonnanceCp.xml",
+      "content": "\"<Composant-Definition code=\"OrdonnanceCp\">\n  <type>TYPE_BEAN_COMP</type>\n  <ComposantsFils>\n    <Composant-Definition code=\"DocumentCp\">\n      <name>signaturePharmacien</name>\n      <type>TYPE_BEAN_COMP</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n      <ComposantsFils />\n      <detailComposants>\n        <Attribut code=\"typePiece\">\n          <type>TYPE_ATTR_DP</type>\n          <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n          <mandatory>false</mandatory>\n        </Attribut>\n      </detailComposants>\n    </Composant-Definition>\n  </ComposantsFils>\n  <detailComposants>\n    <Attribut code=\"dateExecution\">\n      <type>TYPE_ATTR_DATE</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n    </Attribut>\n    <Attribut code=\"iNPE\">\n      <type>TYPE_ATTR_STR</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n    </Attribut>\n    <Attribut code=\"prixFacture\">\n      <type>TYPE_ATTR_DOUBLE</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n    </Attribut>\n  </detailComposants>\n</Composant-Definition>\""
+    }
+  ]
+}

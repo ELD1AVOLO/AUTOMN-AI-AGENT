@@ -1,0 +1,163 @@
+## Structure des données et relations
+
+### ActeCp_doc
+Composant : ActeCp (Informations sur les actes de soins médicaux produits et utilisés dans un système de gestion de soins de santé)
+
+Informations de base :
+
+codeActe (string) : Identifiant unique de l'acte de soins.
+dateActe (date) : Date à laquelle l'acte a été effectué.
+iNPE (string) : Identifiant national de prestataire, permettant d'identifier le fournisseur de soins.
+montantFacture (double) : Montant facturé pour l'acte.
+
+Données médicales :
+
+Aucun attribut dans ce bloc pour le composant ActeCp.
+
+Documents associés :
+
+signRadiologueBiologiste (DocumentCp) : Document signé par le radiologue ou biologiste concerné, comportant un type de pièce (DP). Relation 1:1 avec l'acte.
+signatureMedecinTraitant (DocumentCp) : Document signé par le médecin traitant concerné, comportant un type de pièce (DP). Relation 1:1 avec l'acte.
+
+### DemandeRemboursementCp_doc
+Composant : DemandeRemboursementCp (Entité métier représentant une demande de remboursement pour un patient hospitalisé au Centre Piloté (CP), contenant les informations nécessaires pour traiter la demande)
+
+Informations de base :
+
+code (type) : code composant (ex: "DemandeRemboursementCp")
+
+Données patient :
+
+immatriculationPatient (string) : identifiant du patient hospitalisé
+medecinTraitantINPE (string) : nom du médecin traitant du patient
+
+Données médicales :
+
+typeSoins (DP) : type de soins fournis au patient
+statutActeBioRadioImag (DP) : statut des actes de biologie, radiologie et imagerie
+
+Financières :
+
+montantFrais (double) : montant total des frais de soins
+montantRemboursementApprouve (double) : montant du remboursement approuvé
+
+Suivi et statut :
+
+statut (DP) : statut général de la demande de remboursement
+validation (DP) : date de validation de la demande de remboursement
+
+Documents associés :
+
+ppActeBiologieRadiologieImagerie (PP) : pièce justificative pour les actes de biologie, radiologie et imagerie
+ppActeEffectue (PP) : pièce justificative pour les actes effectués
+ppOrdonnance (PP) : pièce justificative pour l'ordonnance
+ppStart (PP) : pièce justificative pour le démarrage du traitement
+
+Etablissements de soins :
+
+etablissemmentSoinsINPE (string) : établissement des soins au Centre Piloté (INPE)
+
+### OrdonnanceCp_doc
+Composant : OrdonnanceCp (Entité métier représentant une ordonnance de comptabilité)
+
+Informations de base :
+
+id (type) : Identifiant unique de l'ordonnance
+
+numeroDossier (type) : Numéro de dossier associé à l'ordonnance
+
+[Données patient] :
+
+cinPatient (type) : Numéro de l'assuré qui a reçu la ordonnance
+
+raisonSociale (type) : Raison sociale de l'assuré
+
+dateNaissance (type) : Date de naissance du patient
+
+[Données médicales] :
+
+iNPE (type) : Code INPE associé à la ordonnance
+
+[Données financières] :
+
+prixFacture (type) : Montant total de la facture pour la ordonnance
+
+dateExecution (type) : Date de réalisation de l'ordonnance
+
+[Suivi et statut] :
+
+statut (type) : État actuel de l'ordonnance (par exemple, en cours, résolu)
+
+[Documents associés] :
+
+DocumentCp (type) : Relation avec le document CP associé à l'ordonnance
+   - signaturePharmacien (type) : Date et heure de la signature du pharmacien pour le document CP
+
+### Tiers_doc
+Composant : Tiers (Entité métier représentant un tiers, c'est-à-dire une personne physique ou morale qui est reliée à l'entreprise. Cette entité comprend des attributs tels que l'identifiant, le nom, la raison social, le statut, le sexe, la date de naissance, l'adresse, le numéro de téléphone, le fax, l'email, le site web et les fonctionnalités détenues. Elle peut également inclure des relations telles que les fonctionnalités détenues par ce tiers.)
+
+Informations de base :
+
+identifiant (type) : Identifiant unique du tiers (optionnel)
+
+Données patient :
+
+personneMorale (type) : Informations sur la personne morale (optionnel)
+
+personnePhysique (type) : Informations sur la personne physique (optionnel)
+
+prenom (type) : Prénom de la personne physique (optionnel)
+
+adresse (type) : Adresse de la personne morale ou physique (optionnel)
+
+adresse2 (type) : Complément d'adresse de la personne morale ou physique (optionnel)
+
+categorie (type) : Catégorie de tiers (optionnel)
+
+categorieTiers (type) : Type de catégorie de tiers (optionnel)
+
+cin (type) : Numéro de l'identifiant fiscal pour la personne physique (optionnel)
+
+civilite (type) : Forme honorifique utilisée pour la personne physique (optionnel)
+
+dateNaissance (type) : Date de naissance de la personne physique (optionnel)
+
+descriptionActivite (type) : Description de l'activité du tiers (optionnel)
+
+Données financières :
+
+fax (type) : Numéro de fax de la personne morale ou physique (optionnel)
+
+fax2 (type) : Second numéro de fax de la personne morale ou physique (optionnel)
+
+fonctions (type) : Fonction(s) exercée(es) par le tiers (optionnel)
+
+immatriculation (type) : Immatriculation de la personne physique (optionnel)
+
+licenceDate (type) : Date d'émission de la licence (optionnel)
+
+licenceNumber (type) : Numéro de la licence (optionnel)
+
+licenceType (type) : Type(s) de licence (multiple possibles) (optionnel)
+
+suivi et statut :
+
+mail (type) : Adresse e-mail de la personne morale ou physique (optionnel)
+
+nom (type) : Nom de la personne morale ou physique (optionnel)
+
+raisonSocial_Nom (type) : Raison sociale et nom de la personne morale (optionnel)
+
+representantLegal (type) : Nom du représentant légal (optionnel)
+
+sexe (type) : Sexe de la personne physique (optionnel)
+
+siteWeb (type) : Site web de la personne morale ou physique (optionnel)
+
+telephone (type) : Numéro de téléphone de la personne morale ou physique (optionnel)
+
+telephone2 (type) : Deuxième numéro de téléphone de la personne morale ou physique (optionnel)
+
+typeTiers (type) : Type(s) de tiers (multiple possibles) (optionnel)
+
+ville (type) : Ville d' localisation de la personne morale ou physique (optionnel)

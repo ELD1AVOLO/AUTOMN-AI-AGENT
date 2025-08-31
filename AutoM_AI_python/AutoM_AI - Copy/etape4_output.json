@@ -1,0 +1,132 @@
+[
+  {
+    "interface": "Liste des demandes à traiter",
+    "components": [
+      {
+        "name": "demandTable",
+        "type": "DataGrid",
+        "label": "",
+        "fieldType": "text",
+        "disposition": "vertical"
+      },
+      {
+        "name": "searchBar",
+        "type": "SearchInput",
+        "label": "Rechercher",
+        "fieldType": "text",
+        "disposition": "horizontal"
+      }
+    ],
+    "actions": [
+      {
+        "name": "viewList",
+        "type": "Button",
+        "label": "Visualiser la liste des demandes à traiter"
+      },
+      {
+        "name": "detailDemand",
+        "type": "Link",
+        "label": "Accéder au détail d'une demande"
+      }
+    ]
+  },
+  {
+    "interface": "Détail d'une demande",
+    "components": [
+      {
+        "name": "demandInfo",
+        "type": "TextField",
+        "label": "Identifiant de l'assuré",
+        "fieldType": "text",
+        "disposition": "horizontal"
+      },
+      {
+        "name": "amountRembursement",
+        "type": "NumberField",
+        "label": "Montant à rembourser",
+        "fieldType": "number",
+        "disposition": "horizontal"
+      },
+      {
+        "name": "dateTreatments",
+        "type": "DateInput",
+        "label": "Date des soins",
+        "fieldType": "date",
+        "disposition": "horizontal"
+      },
+      {
+        "name": "treatmentType",
+        "type": "SelectField",
+        "label": "Type de soin",
+        "fieldType": "select",
+        "disposition": "horizontal"
+      }
+    ],
+    "actions": [
+      {
+        "name": "validateDemand",
+        "type": "Button",
+        "label": "Valider"
+      },
+      {
+        "name": "putOnHold",
+        "type": "Button",
+        "label": "Mettre en attente"
+      },
+      {
+        "name": "rejectDemand",
+        "type": "Button",
+        "label": "Rejeter la demande"
+      },
+      {
+        "name": "addComment",
+        "type": "TextField",
+        "label": "Ajouter un commentaire"
+      }
+    ]
+  },
+  {
+    "interface": "Historique des demandes",
+    "components": [
+      {
+        "name": "demandHistoryTable",
+        "type": "DataGrid",
+        "label": "",
+        "fieldType": "text",
+        "disposition": "vertical"
+      },
+      {
+        "name": "filterBar",
+        "type": "FilterInput",
+        "label": "Filtrer les demandes",
+        "fieldType": "text",
+        "disposition": "horizontal"
+      }
+    ],
+    "actions": [
+      {
+        "name": "viewHistory",
+        "type": "Button",
+        "label": "Consulter l'historique des demandes"
+      }
+    ]
+  },
+  {
+    "interface": "Exportation des résultats",
+    "components": [
+      {
+        "name": "exportOptions",
+        "type": "SelectField",
+        "label": "Format d'exportation",
+        "fieldType": "select",
+        "disposition": "horizontal"
+      },
+      {
+        "name": "exportButton",
+        "type": "Button",
+        "label": "Exporter"
+      }
+    ],
+    "actions": []
+  }
+]

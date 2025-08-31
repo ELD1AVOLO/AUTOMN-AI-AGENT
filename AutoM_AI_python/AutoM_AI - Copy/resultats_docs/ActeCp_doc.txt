@@ -1,0 +1,17 @@
+Composant : ActeCp (Informations sur les actes de soins médicaux produits et utilisés dans un système de gestion de soins de santé)
+
+Informations de base :
+
+codeActe (string) : Identifiant unique de l'acte de soins.
+dateActe (date) : Date à laquelle l'acte a été effectué.
+iNPE (string) : Identifiant national de prestataire, permettant d'identifier le fournisseur de soins.
+montantFacture (double) : Montant facturé pour l'acte.
+
+Données médicales :
+
+Aucun attribut dans ce bloc pour le composant ActeCp.
+
+Documents associés :
+
+signRadiologueBiologiste (DocumentCp) : Document signé par le radiologue ou biologiste concerné, comportant un type de pièce (DP). Relation 1:1 avec l'acte.
+signatureMedecinTraitant (DocumentCp) : Document signé par le médecin traitant concerné, comportant un type de pièce (DP). Relation 1:1 avec l'acte.

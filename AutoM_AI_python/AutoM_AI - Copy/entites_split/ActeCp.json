@@ -1,0 +1,57 @@
+{
+  "code": "ActeCp",
+  "type": "TYPE_BEAN_COMP",
+  "attributs": [
+    {
+      "nom": "codeActe",
+      "type": "TYPE_ATTR_STR",
+      "obligatoire": false
+    },
+    {
+      "nom": "dateActe",
+      "type": "TYPE_ATTR_DATE",
+      "obligatoire": false
+    },
+    {
+      "nom": "iNPE",
+      "type": "TYPE_ATTR_STR",
+      "obligatoire": false
+    },
+    {
+      "nom": "montantFacture",
+      "type": "TYPE_ATTR_DOUBLE",
+      "obligatoire": false
+    }
+  ],
+  "relations": [
+    {
+      "nom": "signRadiologueBiologiste",
+      "code": "DocumentCp",
+      "type": "TYPE_BEAN_COMP",
+      "cardinalite": "TYPE_RELATION_SIMPLE",
+      "attributs": [
+        {
+          "nom": "typePiece",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        }
+      ],
+      "cardinalité": "1:1"
+    },
+    {
+      "nom": "signatureMedecinTraitant",
+      "code": "DocumentCp",
+      "type": "TYPE_BEAN_COMP",
+      "cardinalite": "TYPE_RELATION_SIMPLE",
+      "attributs": [
+        {
+          "nom": "typePiece",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        }
+      ],
+      "cardinalité": "1:1"
+    }
+  ],
+  "description": "Entité métier représentant ActeCp"
+}

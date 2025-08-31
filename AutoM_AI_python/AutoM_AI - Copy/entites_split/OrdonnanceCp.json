@@ -1,0 +1,39 @@
+{
+  "code": "OrdonnanceCp",
+  "type": "TYPE_BEAN_COMP",
+  "attributs": [
+    {
+      "nom": "dateExecution",
+      "type": "TYPE_ATTR_DATE",
+      "obligatoire": false
+    },
+    {
+      "nom": "iNPE",
+      "type": "TYPE_ATTR_STR",
+      "obligatoire": false
+    },
+    {
+      "nom": "prixFacture",
+      "type": "TYPE_ATTR_DOUBLE",
+      "obligatoire": false
+    }
+  ],
+  "relations": [
+    {
+      "nom": "DocumentCp",
+      "code": "DocumentCp",
+      "type": "TYPE_BEAN_COMP",
+      "cardinalite": "TYPE_RELATION_SIMPLE",
+      "attributs": [
+        {
+          "nom": "signaturePharmacien",
+          "type": "TYPE_ATTR_DP",
+          "obligatoire": false
+        }
+      ],
+      "description": "Relation avec la signature du pharmacien",
+      "cardinalité": "1:1"
+    }
+  ],
+  "description": "Entité métier représentant une ordonnance de comptabilité"
+}

@@ -1,0 +1,115 @@
+ Voici un résumé de la structure du workflow métier décrite dans le fichier XML fourni, sous forme de JSON :
+
+```json
+{
+  "entités": [
+    {
+      "nom": "processDefinition",
+      "attributs": ["name"]
+    },
+    {
+      "nom": "start-state",
+      "attributs": ["name"]
+    },
+    {
+      "nom": "state",
+      "attributs": ["name"]
+    },
+    {
+      "nom": "end-state",
+      "attributs": ["name"]
+    },
+    {
+      "nom": "task-node",
+      "attributs": ["name"]
+    }
+  ],
+  "étapes": [
+    {
+      "nom": "DemandeRemboursementSoinsSante.debut",
+      "rôle": "",
+      "transitions": [
+        {
+          "nom": "ToInitialiserContext",
+          "cible": "InitialiserContexte"
+        }
+      ]
+    },
+    {
+      "nom": "InitialiserContexte",
+      "rôle": "Initialiser le contexte JBPM",
+      "transitions": [
+        {
+          "nom": "toInitierReclamation",
+          "cible": "InitierReclamation"
+        }
+      ]
+    },
+    {
+      "nom": "InitierReclamation",
+      "rôle": "",
+      "transitions": [
+        {
+          "nom": "toSaisirDetails",
+          "cible": "SaisirDetails"
+        }
+      ]
+    },
+    {
+      "nom": "SaisirDetails",
+      "rôle": "",
+      "transitions": [
+        {
+          "nom": "toValidation",
+          "cible": "Validation"
+        },
+        {
+          "nom": "toAnnuler",
+          "cible": "DemandeRemboursementSoinsSante.fin"
+        }
+      ]
+    },
+    {
+      "nom": "Validation",
+      "rôle": "",
+      "transitions": [
+        {
+          "nom": "toRetourner",
+          "cible": "SaisirDetails"
+        },
+        {
+          "nom": "toExamenRemboursement",
+          "cible": "ExamenRemboursement"
+        }
+      ]
+    },
+    {
+      "nom": "ExamenRemboursement",
+      "rôle": "",
+      "transitions": [
+        {
+          "nom": "ToEnd",
+          "cible": "DemandeRemboursementSoinsSante.fin"
+        }
+      ]
+    },
+    {
+      "nom": "DemandeRemboursementSoinsSante.fin",
+      "rôle": "",
+      "transitions": []
+    }
+  ],
+  "interfaces": [
+    {
+      "type": "formulaire",
+      "description": "Formulaire pour saisir les détails de la demande de remboursement"
+    },
+    {
+      "type": "validation",
+      "description": "Processus de validation par une personne physique"
+    }
+  ]
+}
+```
+
+Ce résumé couvre l'ensemble des entités manipulées, les étapes du workflow avec leurs transitions, et détecte deux interfaces potentielles : un formulaire pour la saisie des détails de la demande et une validation par une personne physique.

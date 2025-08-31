@@ -1,0 +1,43 @@
+Je souhaite concevoir une application interne pour une entreprise d’assurance, afin de permettre aux agents de gérer efficacement les demandes de remboursement médical soumises par les assurés.
+
+Objectif :
+Optimiser le processus de traitement des remboursements médicaux via une interface métier complète, sécurisée, et adaptée aux besoins internes des agents.
+
+Fonctionnalités attendues :
+1. Un agent peut enregistrer une nouvelle demande reçue (par courrier ou email) en remplissant :
+   - l'identifiant de l'assuré,
+   - le montant à rembourser,
+   - la date des soins,
+   - le type de soin (consultation, pharmacie, hospitalisation...),
+   - les documents justificatifs numérisés (PDF, images).
+
+2. Un autre agent (ou superviseur) peut :
+   - visualiser la liste des demandes à traiter,
+   - accéder au détail d’une demande,
+   - valider, mettre en attente ou rejeter la demande,
+   - ajouter des commentaires internes au traitement.
+
+3. Un module de suivi permet de :
+   - consulter l’historique des demandes,
+   - filtrer les demandes par statut, date, ou type de soin,
+   - exporter les résultats en Excel ou PDF.
+
+Contraintes :
+- L’interface doit être conforme aux normes internes de développement (Java + ZK/ZUL).
+- Le respect de la confidentialité est essentiel (RGPD).
+- L'application doit être responsive sur postes bureautiques uniquement.
+- L’accès est réservé aux utilisateurs authentifiés via Active Directory.
+
+Utilisateurs :
+- Agent de saisie
+- Agent valideur
+- Superviseur
+
+Merci d’analyser ce besoin métier et de le transformer en un JSON structuré contenant :
+- objectif global
+- rôles utilisateurs
+- actions par rôle
+- étapes logiques du processus
+- interfaces attendues
+- données à saisir ou consulter
+- contraintes techniques ou fonctionnelles

@@ -1,0 +1,7 @@
+{
+  "objectif_principal": "Gestion des demandes de remboursement médical pour une mutuelle",
+  "utilisateurs_concernes": ["Assurés", "Agents de traitement"],
+  "scenarios_usage": ["Créer une nouvelle demande avec téléversement de documents", "Suivre l'état de traitement", "Recevoir une notification lors du remboursement", "Valider/Refuser demandes en attente", "Demander des pièces justificatives supplémentaires", "Filtrer par statut et accéder à l'historique de chaque assuré"],
+  "contraintes": ["Conformité aux règles de confidentialité (RGPD)", "Traçabilité des actions"],
+  "interfaces_souhaitees": ["Tableau de bord", "Formulaire de demande", "Page de validation", "Interface d'administration"]
+}

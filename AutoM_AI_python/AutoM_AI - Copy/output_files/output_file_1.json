@@ -1,0 +1,10 @@
+{
+  "total_files": 1,
+  "files": [
+    {
+      "file_id": 1,
+      "file_name": "ActeCp.xml",
+      "content": "\"<Composant-Definition code=\"ActeCp\">\n  <type>TYPE_BEAN_COMP</type>\n  <ComposantsFils>\n    <Composant-Definition code=\"DocumentCp\">\n      <name>signRadiologueBiologiste</name>\n      <type>TYPE_BEAN_COMP</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n      <ComposantsFils />\n      <detailComposants>\n        <Attribut code=\"typePiece\">\n          <type>TYPE_ATTR_DP</type>\n          <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n          <mandatory>false</mandatory>\n        </Attribut>\n      </detailComposants>\n    </Composant-Definition>\n    <Composant-Definition code=\"DocumentCp\">\n      <name>signatureMedecinTraitant</name>\n      <type>TYPE_BEAN_COMP</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n      <ComposantsFils />\n      <detailComposants>\n        <Attribut code=\"typePiece\">\n          <type>TYPE_ATTR_DP</type>\n          <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n          <mandatory>false</mandatory>\n        </Attribut>\n      </detailComposants>\n    </Composant-Definition>\n  </ComposantsFils>\n  <detailComposants>\n    <Attribut code=\"codeActe\">\n      <type>TYPE_ATTR_STR</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n    </Attribut>\n    <Attribut code=\"dateActe\">\n      <type>TYPE_ATTR_DATE</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n    </Attribut>\n    <Attribut code=\"iNPE\">\n      <type>TYPE_ATTR_STR</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n    </Attribut>\n    <Attribut code=\"montantFacture\">\n      <type>TYPE_ATTR_DOUBLE</type>\n      <multiplicite>TYPE_RELATION_SIMPLE</multiplicite>\n      <mandatory>false</mandatory>\n    </Attribut>\n  </detailComposants>\n</Composant-Definition>\""
+    }
+  ]
+}

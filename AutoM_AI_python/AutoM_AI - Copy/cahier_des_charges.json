@@ -1,0 +1,34 @@
+Voici le cahier des charges des interfaces à implémenter, en se basant sur les deux sources d'information :
+
+[
+  {
+    "interface": "Liste des demandes à traiter",
+    "utilisateur": "Agent de saisie", "Agent valideur", "Superviseur",
+    "champs": ["Identifiant de l'assuré", "Montant à rembourser", "Date des soins", "Type de soin"],
+    "actions": ["Visualiser la liste des demandes à traiter", "Accéder au détail d'une demande"],
+    "prochaine_etape": "InitialiserContexte"
+  },
+  {
+    "interface": "Détail d'une demande",
+    "utilisateur": "Agent de saisie", "Agent valideur", "Superviseur",
+    "champs": ["Identifiant de l'assuré", "Montant à rembourser", "Date des soins", "Type de soin"],
+    "actions": ["Valider, mettre en attente ou rejetter la demande", "Ajouter des commentaires internes"],
+    "prochaine_etape": "SaisirDetails"
+  },
+  {
+    "interface": "Historique des demandes",
+    "utilisateur": "Superviseur",
+    "champs": ["Identifiant de l'assuré", "Montant à rembourser", "Date des soins", "Type de soin"],
+    "actions": ["Consulter l'historique des demandes", "Filtrer les demandes par statut, date ou type de soin"],
+    "prochaine_etape": null
+  },
+  {
+    "interface": "Exportation des résultats",
+    "utilisateur": "Superviseur",
+    "champs": ["Identifiant de l'assuré", "Montant à rembourser", "Date des soins", "Type de soin"],
+    "actions": ["Exporter les résultats en Excel ou PDF"],
+    "prochaine_etape": null
+  }
+]
+
+Note : Les champs et actions peuvent varier en fonction du rôle de l'utilisateur.

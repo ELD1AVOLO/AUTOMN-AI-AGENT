@@ -1,0 +1,42 @@
+ ```json
+{
+  "etapes": [
+    {
+      "type": "tâche humaine",
+      "nom": "InitierReclamation",
+      "roles_ou_sources_d_assignation": ["lastAssignedUser"]
+    },
+    {
+      "type": "tâche humaine",
+      "nom": "SaisirDetails",
+      "roles_ou_sources_d_assignation": ["startUser"]
+    },
+    {
+      "type": "tâche humaine",
+      "nom": "Validation",
+      "roles_ou_sources_d_assignation": ["personnePhysique"]
+    },
+    {
+      "type": "tâche humaine",
+      "nom": "ExamenRemboursement",
+      "roles_ou_sources_d_assignation": ["personnePhysique"]
+    }
+  ],
+  "transitions": [
+    { "source": "DemandeRemboursementSoinsSante.debut", "destination": "InitialiserContexte" },
+    { "source": "InitialiserContexte", "destination": "InitierReclamation" },
+    { "source": "InitierReclamation", "destination": "SaisirDetails" },
+    { "source": "SaisirDetails", "destination": "Validation" },
+    { "source": "SaisirDetails", "destination": "DemandeRemboursementSoinsSante.fin" },
+    { "source": "Validation", "destination": "ExamenRemboursement" },
+    { "source": "ExamenRemboursement", "destination": "DemandeRemboursementSoinsSante.fin" }
+  ],
+  "ordre_etapes": [
+    "InitialiserContexte",
+    "InitierReclamation",
+    "SaisirDetails",
+    "Validation",
+    "ExamenRemboursement"
+  ]
+}
+```

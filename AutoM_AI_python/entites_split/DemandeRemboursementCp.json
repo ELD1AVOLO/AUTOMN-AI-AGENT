@@ -1,0 +1,93 @@
+{
+  "code": "DemandeRemboursementCp",
+  "type": "TYPE_BEAN_COMP",
+  "attributs": [
+    {
+      "nom": "dateValidation",
+      "type": "TYPE_ATTR_DATE",
+      "obligatoire": false
+    },
+    {
+      "nom": "etablissemmentSoinsINPE",
+      "type": "TYPE_ATTR_STR",
+      "obligatoire": false
+    },
+    {
+      "nom": "immatriculationPatient",
+      "type": "TYPE_ATTR_STR",
+      "obligatoire": false
+    },
+    {
+      "nom": "medecinTraitantINPE",
+      "type": "TYPE_ATTR_STR",
+      "obligatoire": false
+    },
+    {
+      "nom": "montantFrais",
+      "type": "TYPE_ATTR_DOUBLE",
+      "obligatoire": false
+    },
+    {
+      "nom": "montantRemboursementApprouve",
+      "type": "TYPE_ATTR_DOUBLE",
+      "obligatoire": false
+    },
+    {
+      "nom": "numDossier",
+      "type": "TYPE_ATTR_STR",
+      "obligatoire": false
+    },
+    {
+      "nom": "ppActeBiologieRadiologieImagerie",
+      "type": "TYPE_ATTR_PP",
+      "obligatoire": false
+    },
+    {
+      "nom": "ppActeEffectue",
+      "type": "TYPE_ATTR_PP",
+      "obligatoire": false
+    },
+    {
+      "nom": "ppOrdonnance",
+      "type": "TYPE_ATTR_PP",
+      "obligatoire": false
+    },
+    {
+      "nom": "ppStart",
+      "type": "TYPE_ATTR_PP",
+      "obligatoire": false
+    },
+    {
+      "nom": "statut",
+      "type": "TYPE_ATTR_DP",
+      "obligatoire": false
+    },
+    {
+      "nom": "statutActeBioRadioImag",
+      "type": "TYPE_ATTR_DP",
+      "obligatoire": false
+    },
+    {
+      "nom": "statutActeEffectue",
+      "type": "TYPE_ATTR_DP",
+      "obligatoire": false
+    },
+    {
+      "nom": "statutOrdonnance",
+      "type": "TYPE_ATTR_DP",
+      "obligatoire": false
+    },
+    {
+      "nom": "typeSoins",
+      "type": "TYPE_ATTR_DP",
+      "obligatoire": false
+    },
+    {
+      "nom": "validation",
+      "type": "TYPE_ATTR_DP",
+      "obligatoire": false
+    }
+  ],
+  "relations": [],
+  "description": "Entité métier représentant DemandeRemboursementCp"
+}

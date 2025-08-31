@@ -1,0 +1,67 @@
+Composant : Tiers (Entité métier représentant un tiers, c'est-à-dire une personne physique ou morale qui est reliée à l'entreprise. Cette entité comprend des attributs tels que l'identifiant, le nom, la raison social, le statut, le sexe, la date de naissance, l'adresse, le numéro de téléphone, le fax, l'email, le site web et les fonctionnalités détenues. Elle peut également inclure des relations telles que les fonctionnalités détenues par ce tiers.)
+
+Informations de base :
+
+identifiant (type) : Identifiant unique du tiers (optionnel)
+
+Données patient :
+
+personneMorale (type) : Informations sur la personne morale (optionnel)
+
+personnePhysique (type) : Informations sur la personne physique (optionnel)
+
+prenom (type) : Prénom de la personne physique (optionnel)
+
+adresse (type) : Adresse de la personne morale ou physique (optionnel)
+
+adresse2 (type) : Complément d'adresse de la personne morale ou physique (optionnel)
+
+categorie (type) : Catégorie de tiers (optionnel)
+
+categorieTiers (type) : Type de catégorie de tiers (optionnel)
+
+cin (type) : Numéro de l'identifiant fiscal pour la personne physique (optionnel)
+
+civilite (type) : Forme honorifique utilisée pour la personne physique (optionnel)
+
+dateNaissance (type) : Date de naissance de la personne physique (optionnel)
+
+descriptionActivite (type) : Description de l'activité du tiers (optionnel)
+
+Données financières :
+
+fax (type) : Numéro de fax de la personne morale ou physique (optionnel)
+
+fax2 (type) : Second numéro de fax de la personne morale ou physique (optionnel)
+
+fonctions (type) : Fonction(s) exercée(es) par le tiers (optionnel)
+
+immatriculation (type) : Immatriculation de la personne physique (optionnel)
+
+licenceDate (type) : Date d'émission de la licence (optionnel)
+
+licenceNumber (type) : Numéro de la licence (optionnel)
+
+licenceType (type) : Type(s) de licence (multiple possibles) (optionnel)
+
+suivi et statut :
+
+mail (type) : Adresse e-mail de la personne morale ou physique (optionnel)
+
+nom (type) : Nom de la personne morale ou physique (optionnel)
+
+raisonSocial_Nom (type) : Raison sociale et nom de la personne morale (optionnel)
+
+representantLegal (type) : Nom du représentant légal (optionnel)
+
+sexe (type) : Sexe de la personne physique (optionnel)
+
+siteWeb (type) : Site web de la personne morale ou physique (optionnel)
+
+telephone (type) : Numéro de téléphone de la personne morale ou physique (optionnel)
+
+telephone2 (type) : Deuxième numéro de téléphone de la personne morale ou physique (optionnel)
+
+typeTiers (type) : Type(s) de tiers (multiple possibles) (optionnel)
+
+ville (type) : Ville d' localisation de la personne morale ou physique (optionnel)
